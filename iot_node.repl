@@ -1,0 +1,8 @@
+using "../platforms/cpus/stm32f4.repl"
+
+TempHumidSensor: Antmicro.Renode.Peripherals.Sensors.SI70xx @ i2c1 0x80
+
+/* Psuedo terminal of created in the host machine using CreateUartPtyTerminal.
+   And it is connected to the UART controller of the STM32. Once platform is loaded
+   then create emulated PTY and connect it to UART of stm32. The creation and connection
+   has to be done using monitor commands thus need to be put in script. */
